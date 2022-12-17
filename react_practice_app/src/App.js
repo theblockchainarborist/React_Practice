@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import ColorToggleBtn from './components/buttons/btn-change-color-on-click';
+
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <ColorToggleBtn />
+      </div>
     </div>
   );
 }
