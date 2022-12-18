@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(223, 205, 48);
-    width: 10vw;
+    width: 150px;
     align-items: center;
     border: groove 2px black;
     border-radius: 4px;
