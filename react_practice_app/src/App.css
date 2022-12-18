@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background-color: #5b719e;
+  height: 100vh;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -17,9 +19,9 @@
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -36,3 +38,12 @@
     transform: rotate(360deg);
   }
 }
+
+#drop-down-menu-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
