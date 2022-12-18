@@ -6,6 +6,7 @@ import ColorToggleBtn from './components/buttons/btn-change-color-on-click';
 import CounterButton from './components/buttons/CounterButton';
 import TrafficLight from './components/buttons/TrafficLight';
 import IncreaseDecreaseCounter from './components/buttons/IncreaseDecreaseCounter';
+import WeatherForecastHourly from './components/Api-Components/WeatherForecastHourly';
 
 
 function App() {
@@ -56,16 +57,16 @@ function App() {
       {showButtons === true ?
           <div>
 
-            <div class="btn-element" id="color-toggle-btn-main-div"> 
+            <div class="item" id="color-toggle-btn-main-div"> 
                 <ColorToggleBtn />
                 <h2 class="btn-label"> "These buttons change color on click! " </h2>
             </div>
 
-            <div class="btn-element" id="counter-btn-main-div">
+            <div class="item" id="counter-btn-main-div">
                 <CounterButton />
             </div>
 
-            <div class="btn-element" id="increase-decrease-counter-div">
+            <div class="item" id="increase-decrease-counter-div">
               <IncreaseDecreaseCounter />
             </div>
 
@@ -79,8 +80,8 @@ function App() {
 
       <div id="api-call-examples-div">
         {showApiCalls === true ?
-          <div>
-            Hello API Calls
+          <div class="api-item">
+            <WeatherForecastHourly />
           </div>
           : ''}
       </div>
@@ -89,9 +90,10 @@ function App() {
       <div id="random-components-div">
         {showRandomComponents === true ?
           <div>
-            <div class="btn-element"> 
+            <div class="item"> 
             <TrafficLight />
-            <h2>This is a Traffic Light!</h2>
+            <h2>This is a Traffic Light</h2>
+            <h4>(It acts like a real one!)</h4>
             </div>
           </div>
           : ''}

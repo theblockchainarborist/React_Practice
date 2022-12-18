@@ -1,0 +1,70 @@
+
+.weather-data-main-div {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    width: 100%;
+    align-items: center;
+}
+
+#forecast-data-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 4fr;
+    grid-template-areas: 
+    'date time temp forecast';
+    align-content: left;
+    border: solid 1px black;
+    width: 50vw;
+}
+
+.weather-data-row {
+    text-align: center;
+    width: 100%;
+}
+
+#weather-date {
+    grid-area: date;
+}
+
+#weather-time {
+    grid-area: time;
+}
+
+#weather-temp {
+    grid-area: temp;
+
+}
+
+#weather-forecast {
+    grid-area: forecast;
+    text-align: left;
+    margin-left: 4vw;
+}
+
+.weather-data-header-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 4fr;
+    grid-template-areas: 
+    'header-date header-time header-temp header-forecast';
+    border: solid 1px black;
+    width: 50vw;
+    height: 100%;
+}
+
+#header-date {
+    grid-area: header-date;
+}
+
+#header-time {
+    grid-area: header-time;
+}
+
+#header-temp {
+    grid-area: header-temp;
+}
+
+#header-forecast {
+    grid-area: header-forecast;
+    text-align: left;
+    margin-left: 7vw;
+}
