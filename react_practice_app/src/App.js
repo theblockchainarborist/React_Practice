@@ -63,7 +63,7 @@ function App() {
 
             <div class="item" id="color-toggle-btn-main-div"> 
                 <ColorToggleBtn />
-                <h2 class="btn-label"> "These buttons change color on click! " </h2>
+                <h2 class="btn-label"> These buttons change color on click!</h2>
             </div>
 
             <div class="item" id="counter-btn-main-div">

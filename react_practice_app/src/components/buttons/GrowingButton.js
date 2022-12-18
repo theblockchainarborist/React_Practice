@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 function GrowingButton() {
-  const [width, setWidth] = useState(50);
+  const [width, setWidth] = useState(120);
 
   const handleClick = () => {
     if (width >= 300) {
-        setWidth(50);
+        setWidth(120);
       } else {
         setWidth(width + 10);
       }
