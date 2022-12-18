@@ -1,5 +1,6 @@
 #drop-down-menu {
     height: 5vh;
     width: 10vw;
+    min-width: 50px;
     margin-right: 2vw;
 }

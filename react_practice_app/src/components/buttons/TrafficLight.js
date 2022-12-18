@@ -48,7 +48,7 @@ function TrafficLight() {
             }
 
             {color === 'green' 
-                ? <div class="traffic-light" style={{ backgroundColor: 'green', width: 100, height: 100, border: '3px solid black' }}></div>
+                ? <div class="traffic-light" style={{ backgroundColor: '#30df30', width: 100, height: 100, border: '3px solid black' }}></div>
                 : <div class="traffic-light" style={{ backgroundColor: 'rgba(3, 121, 19, 0.664)', width: 100, height: 100 }}></div>
             }
         </div>
