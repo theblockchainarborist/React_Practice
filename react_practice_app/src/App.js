@@ -27,16 +27,22 @@ function App() {
       </header>
 
       <div id="button-examples-div">
+      {showButtons === true ?
+          <div>
 
-          <div class="btn-element" id="color-toggle-btn-main-div"> 
-            {showButtons === true ? <ColorToggleBtn /> : ""}
-            <h2 class="btn-label"> {showButtons === true ? "These buttons change color on click! " : "" } </h2>
+            <div class="btn-element" id="color-toggle-btn-main-div"> 
+                {showButtons === true ? <ColorToggleBtn /> : ""}
+                {showButtons === true ? <h2 class="btn-label"> "These buttons change color on click! " </h2> : "" } 
+            </div>
+
+            <div class="btn-element" id="counter-btn-main-div">
+                {showButtons === true ? <CounterButton /> : ""}
+            </div>
             
           </div>
+      : '' }
 
-          <div class="btn-element" id="counter-btn-main-div">
-            {showButtons === true ? <CounterButton /> : ""}
-          </div>
+          
         
       </div>
 
