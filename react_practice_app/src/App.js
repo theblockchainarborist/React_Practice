@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import ColorToggleBtn from './components/buttons/btn-change-color-on-click';
 import CounterButton from './components/buttons/CounterButton';
 import TrafficLight from './components/buttons/TrafficLight';
+import IncreaseDecreaseCounter from './components/buttons/IncreaseDecreaseCounter';
 
 
 function App() {
@@ -56,15 +57,17 @@ function App() {
           <div>
 
             <div class="btn-element" id="color-toggle-btn-main-div"> 
-                {showButtons === true ? <ColorToggleBtn /> : ""}
-                {showButtons === true ? <h2 class="btn-label"> "These buttons change color on click! " </h2> : "" } 
+                <ColorToggleBtn />
+                <h2 class="btn-label"> "These buttons change color on click! " </h2>
             </div>
 
             <div class="btn-element" id="counter-btn-main-div">
-                {showButtons === true ? <CounterButton /> : ""}
+                <CounterButton />
             </div>
 
-            
+            <div class="btn-element" id="increase-decrease-counter-div">
+              <IncreaseDecreaseCounter />
+            </div>
 
           </div>
       : '' }
