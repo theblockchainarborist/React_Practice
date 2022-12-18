@@ -4,15 +4,40 @@ import MyDropdownMenu from './components/drop-down-menu/drop-down-menu';
 import React, { useState } from 'react';
 import ColorToggleBtn from './components/buttons/btn-change-color-on-click';
 import CounterButton from './components/buttons/CounterButton';
+import TrafficLight from './components/buttons/TrafficLight';
 
 
 function App() {
 
-  const [showButtons, setShowButtons] = useState(false)
+  const [showButtons, setShowButtons] = useState(false);
+  const [showApiCalls, setShowApiCalls] = useState(false);
+  const [showRandomComponents, setShowRandomComponents] = useState(false);
 
 
   const handleDropdownChange = (value) => {
-    {value === 'buttons' ? setShowButtons(true) : setShowButtons(false)}
+    switch (value) {
+      case ('buttons'): {
+        setShowRandomComponents(false);
+        setShowApiCalls(false);
+        setShowButtons(true);
+      } break;
+      case ('api-calls'): {
+        setShowRandomComponents(false);
+        setShowButtons(false);
+        setShowApiCalls(true);
+      } break;
+      case ('random-components'): {
+        setShowButtons(false);
+        setShowApiCalls(false);
+        setShowRandomComponents(true);
+      } break;
+      default : {
+        setShowRandomComponents(false);
+        setShowButtons(false);
+        setShowApiCalls(false);
+      }
+    }
+    
   }
 
 
@@ -38,7 +63,9 @@ function App() {
             <div class="btn-element" id="counter-btn-main-div">
                 {showButtons === true ? <CounterButton /> : ""}
             </div>
+
             
+
           </div>
       : '' }
 
@@ -46,19 +73,29 @@ function App() {
         
       </div>
 
+
+      <div id="api-call-examples-div">
+        {showApiCalls === true ?
+          <div>
+            Hello API Calls
+          </div>
+          : ''}
+      </div>
+
+
+      <div id="random-components-div">
+        {showRandomComponents === true ?
+          <div>
+            <div class="btn-element"> 
+            <TrafficLight />
+            <h2>This is a Traffic Light!</h2>
+            </div>
+          </div>
+          : ''}
+      </div>
+
     </div>
   );
 }
 
-function Option1() {
-  return <div>Option 1 selected</div>;
-}
-
-function Option2() {
-  return <div>Option 2 selected</div>;
-}
-
-function Option3() {
-  return <div>Option 3 selected</div>;
-}
 export default App;
