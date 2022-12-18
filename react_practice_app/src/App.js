@@ -10,6 +10,7 @@ import WeatherForecastHourly from './components/Api-Components/WeatherForecastHo
 import JumpingButton from './components/buttons/JumpingButton';
 import SpinningButton from './components/buttons/SpinningButton';
 import GrowingButton from './components/buttons/GrowingButton';
+import Calendar from './components/Calendar/Calendar';
 
 
 function App() {
@@ -113,6 +114,11 @@ function App() {
             <TrafficLight />
             <h2>This is a Traffic Light</h2>
             <h4>(It acts like a real one!)</h4>
+            </div>
+            <div class="item"> 
+            <Calendar />
+            <h2>This is Calendar</h2>
+            <h4>(Click through the months and years!)</h4>
             </div>
           </div>
           : ''}
