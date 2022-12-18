@@ -16,3 +16,26 @@
     height: 5vh;
     background-color: rgb(173, 235, 173);
 }
+
+#traffic-light-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#traffic-light-body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 205, 48);
+    width: 10vw;
+    align-items: center;
+    border: groove 2px black;
+    border-radius: 4px;
+}
+
+.traffic-light {
+    display: flex;
+    border-radius: 100%;
+    margin: 1.5vh;
+    border: solid 1px black;
+}
