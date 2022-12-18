@@ -14,26 +14,26 @@ function MyDropdownMenu(props) {
       <select id="drop-down-menu" value={selectedOption} onChange={handleChange}>
         <option value={"makeSelection"}>Select Display Options </option>
         <option value="buttons">Buttons</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+        <option value="api-calls">API Calls</option>
+        <option value="random-components">Random Components</option>
       </select>
       {selectedOption === 'buttons' && <Buttons />}
-      {selectedOption === 'option2' && <Option2 />}
-      {selectedOption === 'option3' && <Option3 />}
+      {selectedOption === 'api-calls' && <ApiCalls />}
+      {selectedOption === 'random-components' && <RandomComponents />}
     </div>
   );
 }
 
 function Buttons() {
-  return <div>Here are some Button Elements</div>;
+  return <div>Here are some Button Elements!</div>;
 }
 
-function Option2() {
-  return <div>Option 2 selected</div>;
+function ApiCalls() {
+  return <div>Here are some API Calls!</div>;
 }
 
-function Option3() {
-  return <div>Option 3 selected</div>;
+function RandomComponents() {
+  return <div>Here are some Random Components!</div>;
 }
 
 export default MyDropdownMenu;
