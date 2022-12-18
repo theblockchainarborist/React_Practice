@@ -3,6 +3,7 @@ import './App.css';
 import MyDropdownMenu from './components/drop-down-menu/drop-down-menu';
 import React, { useState } from 'react';
 import ColorToggleBtn from './components/buttons/btn-change-color-on-click';
+import CounterButton from './components/buttons/CounterButton';
 
 
 function App() {
@@ -25,9 +26,18 @@ function App() {
         </div>
       </header>
 
-      <div>
-        {showButtons === true ? <ColorToggleBtn /> : ""}
-        {showButtons === true ? "These buttons change color on click!" : "" }
+      <div id="button-examples-div">
+
+          <div class="btn-element" id="color-toggle-btn-main-div"> 
+            {showButtons === true ? <ColorToggleBtn /> : ""}
+            <h2 class="btn-label"> {showButtons === true ? "These buttons change color on click! " : "" } </h2>
+            
+          </div>
+
+          <div class="btn-element" id="counter-btn-main-div">
+            {showButtons === true ? <CounterButton /> : ""}
+          </div>
+        
       </div>
 
     </div>

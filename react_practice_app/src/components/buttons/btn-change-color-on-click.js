@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './btn-change-color-on-click.css';
+import './btn.css';
 
 function ColorToggleBtn() {
   const [colors, setColors] = useState({

@@ -1,7 +1,7 @@
 
 #color-change-btn-div {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 5vh;
     justify-self: space-around;
 }
@@ -9,4 +9,10 @@
 .color-change-btn {
     width: 100%;
     height: 100%;
+}
+
+#increase-count-btn {
+    width: 20vw;
+    height: 5vh;
+    background-color: rgb(173, 235, 173);
 }
