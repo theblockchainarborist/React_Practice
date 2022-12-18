@@ -16,6 +16,8 @@ function ColorToggleBtn() {
     }));
   }
 
+
+
   return (
     <div id="color-change-btn-div">
       <button class="color-change-btn" style={{ backgroundColor: colors.button1 }} onClick={() => handleClick('button1')}>
