@@ -78,3 +78,7 @@
     align-self: center;
     background-color: rgb(31, 161, 221);
 }
+
+.btn-text {
+    white-space: nowrap;
+}
