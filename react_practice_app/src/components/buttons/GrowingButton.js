@@ -13,7 +13,7 @@ function GrowingButton() {
 
   return (
     <button class="btn" style={{ width: `${width}px` }} onClick={handleClick}>
-        <p class="btn-text">Click me to grow</p>
+        <div class="btn-text">Click me to grow</div>
     </button>
   );
 }
