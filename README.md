@@ -1,7 +1,7 @@
 # React_Practice
 Practicing React with a focus on how much time is spent on each added feature / element.
 
-[![View on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/github/theblockchainarborist/React_Practice/draft/react_practice?readonly=1)
+[![View on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/github/theblockchainarborist/React_Practice/main?file=%2Freact_practice_app%2Fsrc%2FApp.css&selection=%5B%7B%22endColumn%22%3A2%2C%22endLineNumber%22%3A5%2C%22startColumn%22%3A2%2C%22startLineNumber%22%3A5%7D%5D&workspace=%257B%2522activeFileId%2522%253A%2522clbttomao00077pg379xx4ybl%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522clbttonvq0019356ia37pv101%2522%253A%257B%2522key%2522%253A%2522clbttonvq0019356ia37pv101%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522type%2522%253A%2522UNASSIGNED_PORT%2522%252C%2522port%2522%253A3000%252C%2522url%2522%253A%2522n8b3vh-3000.preview.csb.app%2522%252C%2522key%2522%253A%2522clbttqltn00e1356ie3jejoqw%2522%252C%2522isMinimized%2522%253Afalse%257D%252C%257B%2522type%2522%253A%2522TERMINAL%2522%252C%2522shellId%2522%253A%2522clbttp2cm00127pg3er9955h8%2522%252C%2522key%2522%253A%2522clbttp25i0079356i6sy2d5sy%2522%252C%2522isMinimized%2522%253Atrue%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522clbttonvq0019356ia37pv101%2522%252C%2522spacesOrder%2522%253A%255B%2522clbttonvq0019356ia37pv101%2522%255D%257D)
 
 
 
