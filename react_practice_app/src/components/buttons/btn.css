@@ -72,3 +72,9 @@
     font-weight: 600;
     align-self: center;
 }
+
+.btn {
+    height: 50%;
+    align-self: center;
+    background-color: rgb(31, 161, 221);
+}

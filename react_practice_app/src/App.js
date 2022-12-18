@@ -7,6 +7,9 @@ import CounterButton from './components/buttons/CounterButton';
 import TrafficLight from './components/buttons/TrafficLight';
 import IncreaseDecreaseCounter from './components/buttons/IncreaseDecreaseCounter';
 import WeatherForecastHourly from './components/Api-Components/WeatherForecastHourly';
+import JumpingButton from './components/buttons/JumpingButton';
+import SpinningButton from './components/buttons/SpinningButton';
+import GrowingButton from './components/buttons/GrowingButton';
 
 
 function App() {
@@ -46,9 +49,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
+        
         <div id="drop-down-menu-div">
+          <img src={logo} className="App-logo" alt="logo" />
           <MyDropdownMenu id="drop-down-menu" onChange={handleDropdownChange} />
         </div>
       </header>
@@ -68,6 +71,22 @@ function App() {
 
             <div class="item" id="increase-decrease-counter-div">
               <IncreaseDecreaseCounter />
+            </div>
+
+            <div class="item basic-row" id="increase-decrease-counter-div">
+              <div class="basic-row">
+              <p class="label">This Button Jumps!</p>
+                <JumpingButton />
+              </div>
+              <div class="basic-row">
+              <p class="label">This Button Spins!</p>
+                <SpinningButton />
+              </div>
+              <div class="basic-row">
+              <p class="label">This Button Grows! (Max size 300px)</p>
+                <GrowingButton />
+              </div>
+              
             </div>
 
           </div>

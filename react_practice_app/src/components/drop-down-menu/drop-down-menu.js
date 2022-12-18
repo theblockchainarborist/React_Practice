@@ -10,7 +10,7 @@ function MyDropdownMenu(props) {
   }
 
   return (
-    <div>
+    <div class="row">
       <select id="drop-down-menu" value={selectedOption} onChange={handleChange}>
         <option value={"makeSelection"}>Select Display Options </option>
         <option value="buttons">Buttons</option>
