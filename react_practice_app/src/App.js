@@ -12,6 +12,7 @@ import SpinningButton from './components/buttons/SpinningButton';
 import GrowingButton from './components/buttons/GrowingButton';
 import Calendar from './components/Calendar/Calendar';
 import WeatherForecastSevenDay from './components/Api-Components/WeatherForecastSevenDay';
+import BitcoinChart from './components/Api-Components/BitcoinTicker';
 
 
 function App() {
@@ -110,6 +111,8 @@ function App() {
             
             <button onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
             {showSevenDayForecast && <WeatherForecastSevenDay />}
+
+            <BitcoinChart />
 
           </div>
           : ''}
