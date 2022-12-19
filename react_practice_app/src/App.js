@@ -11,6 +11,7 @@ import JumpingButton from './components/buttons/JumpingButton';
 import SpinningButton from './components/buttons/SpinningButton';
 import GrowingButton from './components/buttons/GrowingButton';
 import Calendar from './components/Calendar/Calendar';
+import WeatherForecastSevenDay from './components/Api-Components/WeatherForecastSevenDay';
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
   const [showButtons, setShowButtons] = useState(false);
   const [showApiCalls, setShowApiCalls] = useState(false);
   const [showRandomComponents, setShowRandomComponents] = useState(false);
+  const [showHourlyForecast, setShowHourlyForecast] = useState(false);
+  const [showSevenDayForecast, setShowSevenDayForecast] = useState(false);
+
 
 
   const handleDropdownChange = (value) => {
@@ -101,7 +105,12 @@ function App() {
       <div id="api-call-examples-div">
         {showApiCalls === true ?
           <div class="api-item">
-            <WeatherForecastHourly />
+            <button onClick={() => setShowHourlyForecast(!showHourlyForecast)}>Click to show or hide the Hourly Forecast</button>
+            {showHourlyForecast && <WeatherForecastHourly />}
+            
+            <button onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
+            {showSevenDayForecast && <WeatherForecastSevenDay />}
+
           </div>
           : ''}
       </div>

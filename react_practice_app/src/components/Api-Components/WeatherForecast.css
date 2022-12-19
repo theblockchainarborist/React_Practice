@@ -14,12 +14,13 @@
     'date time temp forecast';
     align-content: left;
     border: solid 1px black;
-    width: 50vw;
+    width: 60vw;
 }
 
 .weather-data-row {
     text-align: center;
     width: 100%;
+    background-color: rgb(231, 231, 206);
 }
 
 #weather-date {
@@ -47,8 +48,9 @@
     grid-template-areas: 
     'header-date header-time header-temp header-forecast';
     border: solid 1px black;
-    width: 50vw;
+    width: 60vw;
     height: 100%;
+    background-color: rgb(218, 218, 172);
 }
 
 #header-date {
@@ -66,5 +68,42 @@
 #header-forecast {
     grid-area: header-forecast;
     text-align: left;
-    margin-left: 7vw;
+    margin-left: 3.5vw;
 }
+
+.weather-forecast {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: rgb(231, 231, 230);
+    margin: 1vw;
+    padding: 1vw;
+    overflow-x: scroll;
+  }
+  
+  .day {
+    width: 150px;
+    height: 200px;
+    min-width: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: solid 1px black;
+    background-color: rgb(223, 221, 219);
+    border-radius: 25px;
+    margin: 5px;
+  }
+  
+  .day h3 {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    font-size: 1.2em;
+    margin-bottom: 2px;
+  }
+  
+  .day p {
+    font-size: 0.9em;
+    color: #666;
+  }
+
