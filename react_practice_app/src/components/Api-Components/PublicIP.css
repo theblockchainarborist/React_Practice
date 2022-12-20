@@ -1,0 +1,21 @@
+
+#public-ip-div {
+    display: flex;
+    width: 22vw;
+    height: auto;
+    border: ridge 3px black;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+#public-ip-text {
+    font-size: 1vw;
+    font-weight: 450;
+    margin-left: 1vw;
+}
+
+#ip-address {
+    font-size: 1.3vw;
+    margin-right: 1vw;
+}

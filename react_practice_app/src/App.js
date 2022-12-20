@@ -17,6 +17,7 @@ import BitcoinTicker from './components/Api-Components/BitcoinTicker';
 import CryptoPriceScroller from './components/Api-Components/CryptoPriceScroller';
 import SinkingButton from './components/buttons/SinkingButton';
 import ShrinkingButton from './components/buttons/ShrinkingButton';
+import PublicIP from './components/Api-Components/PublicIP';
 
 
 
@@ -65,6 +66,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
           <MyDropdownMenu id="drop-down-menu" onChange={handleDropdownChange} />
         </div>
+        {showApiCalls ? <div id="ip-header-div"><PublicIP /></div> : null}
       </header>
 
       <div id="button-examples-div">
@@ -143,8 +145,6 @@ function App() {
             </div>
 
             <PopulationByCountry />
-
-            
 
           </div>
           : ''}
