@@ -1,0 +1,15 @@
+.scroll-container {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border: ridge 2px black;
+  }
+  
+  .crypto-price {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }

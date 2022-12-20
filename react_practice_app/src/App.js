@@ -14,6 +14,7 @@ import Calendar from './components/Calendar/Calendar';
 import WeatherForecastSevenDay from './components/Api-Components/WeatherForecastSevenDay';
 import PopulationByCountry from './components/Api-Components/PopulationByCountry';
 import BitcoinTicker from './components/Api-Components/BitcoinTicker';
+import CryptoPriceScroller from './components/Api-Components/CryptoPriceScroller';
 
 
 
@@ -109,6 +110,8 @@ function App() {
         {showApiCalls === true ?
           <div class="api-item">
 
+            <CryptoPriceScroller />
+
             <button class="standard-btn-short" onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
             {showSevenDayForecast && <WeatherForecastSevenDay />}
 
@@ -120,6 +123,8 @@ function App() {
             </div>
 
             <PopulationByCountry />
+
+            
 
           </div>
           : ''}
