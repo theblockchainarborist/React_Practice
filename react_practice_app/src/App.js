@@ -18,6 +18,7 @@ import CryptoPriceScroller from './components/Api-Components/CryptoPriceScroller
 import SinkingButton from './components/buttons/SinkingButton';
 import ShrinkingButton from './components/buttons/ShrinkingButton';
 import PublicIP from './components/Api-Components/PublicIP';
+import TicTacToe from './components/Api-Components/TicTacToe';
 
 
 
@@ -163,6 +164,9 @@ function App() {
             <Calendar />
             <h2>This is Calendar</h2>
             <h4>(Click through the months and years!)</h4>
+            </div>
+            <div class="item">
+              <TicTacToe />
             </div>
           </div>
           : ''}
