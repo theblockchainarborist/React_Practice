@@ -1,0 +1,49 @@
+
+#population-main-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#population-by-country-main {
+    border: solid 1px black;
+    width: 20%;
+    min-height: 400px;
+    text-align: center;
+    padding-top: 2vh;
+    background-color: rgb(247, 247, 247);
+    border-radius: 22px;
+    min-width: 300px;
+}
+
+#country-name {
+    font-size: 2vw;
+}
+
+.small-img {
+    width: 50%;
+}
+
+.population-text {
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+#country-population-num {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+#country-selector-drop-down {
+    width: 80%;
+}
+
+.standard-btn {
+    width: 55%;
+    height: 10%;
+    margin-top: 2%;
+}
+
+#title-label {
+    font-size: 2rem;
+}

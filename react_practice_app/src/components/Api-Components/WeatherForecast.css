@@ -109,4 +109,19 @@
 
   .btn-price {
     font-size: 1.8em;
+    width: 50vw;
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 1vh;
+    background-color: rgb(247, 247, 247);
+  }
+
+  #btn-price-div {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+
+    
+    width: 100%;
+    text-align: center;
   }

@@ -12,7 +12,9 @@ import SpinningButton from './components/buttons/SpinningButton';
 import GrowingButton from './components/buttons/GrowingButton';
 import Calendar from './components/Calendar/Calendar';
 import WeatherForecastSevenDay from './components/Api-Components/WeatherForecastSevenDay';
-import BitcoinChart from './components/Api-Components/BitcoinTicker';
+import PopulationByCountry from './components/Api-Components/PopulationByCountry';
+import BitcoinTicker from './components/Api-Components/BitcoinTicker';
+
 
 
 function App() {
@@ -106,13 +108,18 @@ function App() {
       <div id="api-call-examples-div">
         {showApiCalls === true ?
           <div class="api-item">
-            <button onClick={() => setShowHourlyForecast(!showHourlyForecast)}>Click to show or hide the Hourly Forecast</button>
-            {showHourlyForecast && <WeatherForecastHourly />}
-            
-            <button onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
+
+            <button class="standard-btn-short" onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
             {showSevenDayForecast && <WeatherForecastSevenDay />}
 
-            <BitcoinChart />
+            <button class="standard-btn-short" onClick={() => setShowHourlyForecast(!showHourlyForecast)}>Click to show or hide the Hourly Forecast</button>
+            {showHourlyForecast && <WeatherForecastHourly />}
+            
+            <div>
+              <BitcoinTicker />
+            </div>
+
+            <PopulationByCountry />
 
           </div>
           : ''}

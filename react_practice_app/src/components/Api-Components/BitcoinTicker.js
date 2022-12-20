@@ -35,7 +35,7 @@ const BitcoinTicker = () => {
   }
 
   if (price) {
-    return <p class="btn-price">The current Bitcoin price is ${price}</p>;
+    return <div id="btn-price-div"> <p class="btn-price">The current Bitcoin price is ${price}</p> </div>;
   }
 
   return <p>Loading...</p>;
