@@ -17,7 +17,7 @@ const SpinningButton = () => {
         transform: spinning ? 'rotate(360deg)' : 'none',
       }}
     >
-      Click me to spin!
+      Click me to spin
     </button>
   );
 };

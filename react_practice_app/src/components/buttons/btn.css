@@ -7,7 +7,7 @@
 }
 
 .color-change-btn {
-    width: 100%;
+    width: 95%;
     height: 100%;
 }
 
@@ -81,4 +81,8 @@
 
 .btn-text {
     white-space: nowrap;
+}
+
+#increase-count-btn {
+    font-size: 1.2vw;
 }

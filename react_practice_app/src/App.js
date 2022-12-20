@@ -15,6 +15,8 @@ import WeatherForecastSevenDay from './components/Api-Components/WeatherForecast
 import PopulationByCountry from './components/Api-Components/PopulationByCountry';
 import BitcoinTicker from './components/Api-Components/BitcoinTicker';
 import CryptoPriceScroller from './components/Api-Components/CryptoPriceScroller';
+import SinkingButton from './components/buttons/SinkingButton';
+import ShrinkingButton from './components/buttons/ShrinkingButton';
 
 
 
@@ -87,15 +89,33 @@ function App() {
               <p class="label">This Button Jumps!</p>
                 <JumpingButton />
               </div>
+
               <div class="basic-row">
+              <p class="label">This Button Sinks!</p>
+                <SinkingButton />
+              </div>
+
+              
+              
+              
+            </div>
+
+            <div class="item basic-row">
+              <div class="basic-row">
+                <p class="label">This Button Grows! (Max size 300px)</p>
+                  <GrowingButton />
+              </div>
+              <div class="basic-row">
+                <p class="label">This Button Shrinks! (Min size 100px)</p>
+                  <ShrinkingButton />
+              </div>
+            </div>
+
+            <div class="item basic-row">
+            <div class="basic-row">
               <p class="label">This Button Spins!</p>
                 <SpinningButton />
               </div>
-              <div class="basic-row">
-              <p class="label">This Button Grows! (Max size 300px)</p>
-                <GrowingButton />
-              </div>
-              
             </div>
 
           </div>

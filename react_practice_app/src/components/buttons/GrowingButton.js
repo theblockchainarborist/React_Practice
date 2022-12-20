@@ -4,7 +4,7 @@ function GrowingButton() {
   const [width, setWidth] = useState(120);
 
   const handleClick = () => {
-    if (width >= 300) {
+    if (width >= 400) {
         setWidth(120);
       } else {
         setWidth(width + 10);

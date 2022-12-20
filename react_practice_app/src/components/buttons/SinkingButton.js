@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './btn.css';
 
-const JumpingButton = () => {
+const SinkingButton = () => {
   const [jumping, setJumping] = useState(false);
 
   const handleClick = () => {
@@ -14,12 +14,12 @@ const JumpingButton = () => {
       onClick={handleClick}
       style={{
         transition: 'transform 0.5s',
-        transform: jumping ? 'translateY(-20px)' : 'none',
+        transform: jumping ? 'translateY(20px)' : 'none',
       }}
     >
-      Click me to jump
+      Click me to sink
     </button>
   );
 };
 
-export default JumpingButton;
+export default SinkingButton;
