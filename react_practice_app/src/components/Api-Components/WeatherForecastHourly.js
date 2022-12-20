@@ -75,11 +75,12 @@ function getTimeOfDay(dateString) {
 
   function getDate (thisDate) {
     const date = new Date(thisDate);
-
-    const month = date.getMonth(); // 11 (months are 0-indexed)
-    const day = date.getDate(); // 18
-
-    return `${month}/${day}`
+  
+    const month = date.getMonth(); // months are 0-indexed, so add 1 to get the correct month number
+    const monthName = date.toLocaleString('default', { month: 'long' }); // get the month name
+    const day = date.getDate(); // get the day of the month
+  
+    return `${monthName} ${day}`;
   }
   
 
