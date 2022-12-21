@@ -45,13 +45,13 @@ const PopulationByCountry = () => {
             ))}
           </select>
         </label>
-        <button class="standard-btn" type="submit">Show population</button>
+        <button className="standard-btn" type="submit">Show population</button>
 
           {countryName ? <h1 id="country-name">{countryName}</h1> : null}
-          {countryFlag ? <img class="small-img" src={countryFlag} alt="Country Flag" /> : null}
-          {population ? <p class="population-text">Population</p> : null}
+          {countryFlag ? <img className="small-img" src={countryFlag} alt="Country Flag" /> : null}
+          {population ? <p className="population-text">Population</p> : null}
           {population ? <p id="country-population-num">{population}</p> : null}
-          {selectedCountry === 'select-country' ? <p class="population-text">Please select a country and click Show Population to see the countries population!</p> : null}
+          {selectedCountry === 'select-country' ? <p className="population-text">Please select a country and click Show Population to see the countries population!</p> : null}
         
       </form>
     </div>

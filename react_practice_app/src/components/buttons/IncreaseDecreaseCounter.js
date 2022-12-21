@@ -13,13 +13,13 @@ function IncreaseDecreaseCounter() {
   };
 
   return (
-    <div class="two-row-grid">
+    <div className="two-row-grid">
       <h1>{count}</h1>
-      <div class="row">
-        <p class="label-text">Click to Increase</p>
-        <button class="square" onClick={handleIncrement}>+</button>
-        <button class="square" onClick={handleDecrement}>-</button>
-        <p class="label-text">Click to Decrease</p>
+      <div className="row">
+        <p className="label-text">Click to Increase</p>
+        <button className="square no-select" onClick={handleIncrement}>+</button>
+        <button className="square no-select" onClick={handleDecrement}>-</button>
+        <p className="label-text">Click to Decrease</p>
       </div>
 
 

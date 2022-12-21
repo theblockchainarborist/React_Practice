@@ -10,7 +10,7 @@ const SinkingButton = () => {
   };
 
   return (
-    <button class="btn"
+    <button className="btn no-select"
       onClick={handleClick}
       style={{
         transition: 'transform 0.5s',

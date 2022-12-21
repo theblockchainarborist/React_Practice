@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CalendarDayScheduleEntry from './CalendarDayScheduleEntry';
 import './Calendar.css';
 
 class Calendar extends React.Component {
-  state = {
-    currentMonth: new Date().getMonth(),
-    currentYear: new Date().getFullYear()
+    
+    state = {
+        currentMonth: new Date().getMonth(),
+        currentYear: new Date().getFullYear(),
+        dateString: '',
+        showPopUp: false,
+        formData: {}
+      }
+  
+  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+
+  handlePopUpClose = () => {
+    this.setState({ showPopUp: false });
   }
 
-  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  handlePopUpSubmit = (formData) => {
+    this.setState({ formData: formData, showPopUp: false });
+    console.log(formData)
+  }
 
   renderHeader() {
     const { currentMonth, currentYear } = this.state;
@@ -67,7 +82,8 @@ class Calendar extends React.Component {
         } else if (day > endDay) {
           break;
         } else {
-          days.push(<div key={day} className="calendar-cell">{day}</div>);
+          days.push(<div key={day}>
+            <button value={day} className="calendar-cell" key={day} onClick={(e) => this.handleDayClick(e, this.day, this.currentMonth)}> {day}</button> </div>);
           day++;
         }
       }
@@ -78,14 +94,134 @@ class Calendar extends React.Component {
     return <div className="calendar-body">{rows}</div>;
   }
 
+  handleDayClick(event) {
+    // do something when a day is clicked, such as display an alert or navigate to another page
+    let monthNum = `${this.state.currentMonth}`
+    let targetClicked = `${event.target.value}`
+    let day;
+
+    switch (targetClicked) {
+        case '1': {
+            day = `${targetClicked}st`
+        } break;
+        case '2': {
+            day = `${targetClicked}nd`
+        } break;
+        case '3': {
+            day = `${targetClicked}d`
+        } break;
+        case '4': {
+            day = `${targetClicked}th`
+        } break;
+        case '5': {
+            day = `${targetClicked}th`
+        } break;
+        case '6': {
+            day = `${targetClicked}th`
+        } break;
+        case '7': {
+            day = `${targetClicked}th`
+        } break;
+        case '8': {
+            day = `${targetClicked}th`
+        } break;
+        case '9': {
+            day = `${targetClicked}th`
+        } break;
+        case '10': {
+            day = `${targetClicked}th`
+        } break;
+        case '11': {
+            day = `${targetClicked}th`
+        } break;
+        case '12': {
+            day = `${targetClicked}th`
+        } break;
+        case '13': {
+            day = `${targetClicked}th`
+        } break;
+        case '14': {
+            day = `${targetClicked}th`
+        } break;
+        case '15': {
+            day = `${targetClicked}th`
+        } break;
+        case '16': {
+            day = `${targetClicked}th`
+        } break;
+        case '17': {
+            day = `${targetClicked}th`
+        } break;
+        case '18': {
+            day = `${targetClicked}th`
+        } break;
+        case '19': {
+            day = `${targetClicked}th`
+        } break;
+        case '20': {
+            day = `${targetClicked}th`
+        } break;
+        case '21': {
+            day = `${targetClicked}st`
+        } break;
+        case '22': {
+            day = `${targetClicked}nd`
+        } break;
+        case '23': {
+            day = `${targetClicked}d`
+        } break;
+        case '24': {
+            day = `${targetClicked}th`
+        } break;
+        case '25': {
+            day = `${targetClicked}th`
+        } break;
+        case '26': {
+            day = `${targetClicked}th`
+        } break;
+        case '27': {
+            day = `${targetClicked}th`
+        } break;
+        case '28': {
+            day = `${targetClicked}th`
+        } break;
+        case '29': {
+            day = `${targetClicked}th`
+        } break;
+        case '30': {
+            day = `${targetClicked}th`
+        } break;
+        case '31': {
+            day = `${targetClicked}st`
+        } break;
+        default: {
+            day = `${targetClicked}`
+        }
+    }
+    
+    let date = `${this.months[monthNum]} ${day} ${this.state.currentYear}`
+
+    this.setState({ dateString: date });
+    this.setState({ showPopUp: true });
+  }
+
   render() {
+    const { showPopUp } = this.state;
+
     return (
-    <div class="center">
+      <div className="center">
         <div className="calendar">
-            {this.renderHeader()}
-            {this.renderDays()}
-            {this.renderCells()}
+          {this.renderHeader()}
+          {this.renderDays()}
+          {this.renderCells()}
         </div>
+        {showPopUp && (
+          <CalendarDayScheduleEntry
+            date={this.state.dateString}
+            onClose={this.handlePopUpClose}
+            onSubmit={this.handlePopUpSubmit}
+          />
+        )}
       </div>
     );
   }

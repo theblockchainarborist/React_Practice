@@ -20,13 +20,13 @@ function ColorToggleBtn() {
 
   return (
     <div id="color-change-btn-div">
-      <button class="color-change-btn" style={{ backgroundColor: colors.button1 }} onClick={() => handleClick('button1')}>
+      <button className="color-change-btn no-select" style={{ backgroundColor: colors.button1 }} onClick={() => handleClick('button1')}>
         Button 1
       </button>
-      <button class="color-change-btn" style={{ backgroundColor: colors.button2 }} onClick={() => handleClick('button2')}>
+      <button className="color-change-btn no-select" style={{ backgroundColor: colors.button2 }} onClick={() => handleClick('button2')}>
         Button 2
       </button>
-      <button class="color-change-btn" style={{ backgroundColor: colors.button3 }} onClick={() => handleClick('button3')}>
+      <button className="color-change-btn no-select" style={{ backgroundColor: colors.button3 }} onClick={() => handleClick('button3')}>
         Button 3
       </button>
     </div>

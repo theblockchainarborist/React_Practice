@@ -86,3 +86,7 @@
 #increase-count-btn {
     font-size: 1.2vw;
 }
+
+.no-select {
+    user-select: none;
+}

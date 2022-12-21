@@ -9,11 +9,11 @@ function CounterButton() {
 
   return (
     <div>
-      <button id="increase-count-btn" onClick={handleClick}>
+      <button id="increase-count-btn no-select" onClick={handleClick}>
         Click me to increase the count!
       </button>
       <div>
-        <h2 class="btn-label">
+        <h2 className="btn-label">
           Current count: {count}
         </h2>
       </div>

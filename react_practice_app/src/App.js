@@ -74,27 +74,27 @@ function App() {
       {showButtons === true ?
           <div>
 
-            <div class="item" id="color-toggle-btn-main-div"> 
+            <div className="item" id="color-toggle-btn-main-div"> 
                 <ColorToggleBtn />
-                <h2 class="btn-label"> These buttons change color on click!</h2>
+                <h2 className="btn-label"> These buttons change color on click!</h2>
             </div>
 
-            <div class="item" id="counter-btn-main-div">
+            <div className="item" id="counter-btn-main-div">
                 <CounterButton />
             </div>
 
-            <div class="item" id="increase-decrease-counter-div">
+            <div className="item" id="increase-decrease-counter-div">
               <IncreaseDecreaseCounter />
             </div>
 
-            <div class="item basic-row" id="increase-decrease-counter-div">
-              <div class="basic-row">
-              <p class="label">This Button Jumps!</p>
+            <div className="item basic-row" id="increase-decrease-counter-div">
+              <div className="basic-row">
+              <p className="label">This Button Jumps!</p>
                 <JumpingButton />
               </div>
 
-              <div class="basic-row">
-              <p class="label">This Button Sinks!</p>
+              <div className="basic-row">
+              <p className="label">This Button Sinks!</p>
                 <SinkingButton />
               </div>
 
@@ -103,20 +103,20 @@ function App() {
               
             </div>
 
-            <div class="item basic-row">
-              <div class="basic-row">
-                <p class="label">This Button Grows! (Max size 300px)</p>
+            <div className="item basic-row">
+              <div className="basic-row">
+                <p className="label">This Button Grows! (Max size 300px)</p>
                   <GrowingButton />
               </div>
-              <div class="basic-row">
-                <p class="label">This Button Shrinks! (Min size 100px)</p>
+              <div className="basic-row">
+                <p className="label">This Button Shrinks! (Min size 100px)</p>
                   <ShrinkingButton />
               </div>
             </div>
 
-            <div class="item basic-row">
-            <div class="basic-row">
-              <p class="label">This Button Spins!</p>
+            <div className="item basic-row">
+            <div className="basic-row">
+              <p className="label">This Button Spins!</p>
                 <SpinningButton />
               </div>
             </div>
@@ -131,14 +131,14 @@ function App() {
 
       <div id="api-call-examples-div">
         {showApiCalls === true ?
-          <div class="api-item">
+          <div className="api-item">
 
             <CryptoPriceScroller />
 
-            <button class="standard-btn-short" onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
+            <button className="standard-btn-short" onClick={() => setShowSevenDayForecast(!showSevenDayForecast)}>Click to show or hide the Seven Day Forecast</button>
             {showSevenDayForecast && <WeatherForecastSevenDay />}
 
-            <button class="standard-btn-short" onClick={() => setShowHourlyForecast(!showHourlyForecast)}>Click to show or hide the Hourly Forecast</button>
+            <button className="standard-btn-short" onClick={() => setShowHourlyForecast(!showHourlyForecast)}>Click to show or hide the Hourly Forecast</button>
             {showHourlyForecast && <WeatherForecastHourly />}
             
             <div>
@@ -155,17 +155,17 @@ function App() {
       <div id="random-components-div">
         {showRandomComponents === true ?
           <div>
-            <div class="item"> 
+            <div className="item"> 
             <TrafficLight />
             <h2>This is a Traffic Light</h2>
             <h4>(It acts like a real one!)</h4>
             </div>
-            <div class="item"> 
+            <div className="item"> 
             <Calendar />
             <h2>This is Calendar</h2>
             <h4>(Click through the months and years!)</h4>
             </div>
-            <div class="item">
+            <div className="item">
               <TicTacToe />
             </div>
           </div>

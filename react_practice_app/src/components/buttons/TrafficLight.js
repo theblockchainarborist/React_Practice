@@ -38,18 +38,18 @@ function TrafficLight() {
     <div id="traffic-light-div">
         <div id="traffic-light-body">
             {color === 'red' 
-                ? <div class="traffic-light" style={{ backgroundColor: 'red', width: 100, height: 100, border: '3px solid black' }}></div> 
-                : <div class="traffic-light" style={{ backgroundColor: 'rgba(133, 3, 3, 0.712)', width: 100, height: 100 }}></div> 
+                ? <div className="traffic-light" style={{ backgroundColor: 'red', width: 100, height: 100, border: '3px solid black' }}></div> 
+                : <div className="traffic-light" style={{ backgroundColor: 'rgba(133, 3, 3, 0.712)', width: 100, height: 100 }}></div> 
             }
 
             {color === 'yellow' 
-                ? <div class="traffic-light" style={{ backgroundColor: 'yellow', width: 100, height: 100, border: '3px solid black' }}></div> 
-                : <div class="traffic-light" style={{ backgroundColor: 'rgba(121, 113, 3, 0.664)', width: 100, height: 100 }}></div> 
+                ? <div className="traffic-light" style={{ backgroundColor: 'yellow', width: 100, height: 100, border: '3px solid black' }}></div> 
+                : <div className="traffic-light" style={{ backgroundColor: 'rgba(121, 113, 3, 0.664)', width: 100, height: 100 }}></div> 
             }
 
             {color === 'green' 
-                ? <div class="traffic-light" style={{ backgroundColor: '#30df30', width: 100, height: 100, border: '3px solid black' }}></div>
-                : <div class="traffic-light" style={{ backgroundColor: 'rgba(3, 121, 19, 0.664)', width: 100, height: 100 }}></div>
+                ? <div className="traffic-light" style={{ backgroundColor: '#30df30', width: 100, height: 100, border: '3px solid black' }}></div>
+                : <div className="traffic-light" style={{ backgroundColor: 'rgba(3, 121, 19, 0.664)', width: 100, height: 100 }}></div>
             }
         </div>
     </div>

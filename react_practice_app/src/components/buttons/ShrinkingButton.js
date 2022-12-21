@@ -12,8 +12,8 @@ function ShrinkingButton() {
   }
 
   return (
-    <button class="btn" style={{ width: `${width}px` }} onClick={handleClick}>
-        <div class="btn-text">Click me to shrink</div>
+    <button className="btn no-select" style={{ width: `${width}px` }} onClick={handleClick}>
+        <div className="btn-text">Click me to shrink</div>
     </button>
   );
 }
