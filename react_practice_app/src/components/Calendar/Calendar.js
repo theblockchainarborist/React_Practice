@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CalendarDayScheduleEntry from './CalendarDayScheduleEntry';
 import './Calendar.css';
+import ScheduleList from './MiniSchedule';
 
 class Calendar extends React.Component {
     
@@ -13,7 +14,8 @@ class Calendar extends React.Component {
         formData: {},
         dayValue: [],
         dayScheduleData: null,
-        target: null
+        target: null,
+        position: null
       }
   
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -26,16 +28,23 @@ class Calendar extends React.Component {
     if (tempTargetValue.length > 1) {
         let scheduledData = [];
         for (let i = 1; i < tempTargetValue.length; i++) {
-            scheduledData.push(tempTargetValue[i]);
+            console.log("temp target value = " + tempTargetValue[i])
+            let targetObject = JSON.parse(tempTargetValue[i])
+            targetObject.id = i;
+            console.log("temp target object value = " + JSON.stringify(targetObject))
+            scheduledData.push(targetObject);
         }
         console.log(scheduledData)
         this.setState({ dayScheduleData: scheduledData });
+        this.setState({ position: {x: (event.clientX - 100), y: (event.clientY + 25)} })
         this.setState({ showScheduledData: true });
+        console.log(this.state.position)
     }
   }
 
+
   handleMouseLeave = () => {
-    this.setState({ hovered: false });
+    this.setState({ showScheduledData: false });
   }
 
 
@@ -250,6 +259,9 @@ class Calendar extends React.Component {
 
   render() {
     const { showPopUp } = this.state;
+    const { showScheduledData } = this.state;
+    const { dayScheduleData } = this.state;
+    const { position } = this.state;
 
     return (
       <div className="center">
@@ -265,6 +277,15 @@ class Calendar extends React.Component {
             onSubmit={this.handlePopUpSubmit}
           />
         )}
+
+        {showScheduledData && (
+          <ScheduleList 
+          style={{ top: position.y, left: position.x }}
+          scheduleData = {dayScheduleData} 
+          date={this.state.dateString}
+        />
+        )}
+
       </div>
     );
   }

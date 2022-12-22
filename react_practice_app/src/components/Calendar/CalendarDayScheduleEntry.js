@@ -31,6 +31,7 @@ function CalendarDayScheduleEntry(props) {
           <input
             type="time"
             name="time"
+            pattern="[0-9]{2}:[0-9]{2} [APap][Mm]"
             onChange={handleChange}
           />
         </label>

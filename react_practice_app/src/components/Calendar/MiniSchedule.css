@@ -1,0 +1,58 @@
+
+.MiniSchedule {
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 10;
+    width: 200px;
+    height: auto;
+    background-color: white;
+    align-self: center;
+    margin-right: 50px;
+    white-space: normal;
+    word-wrap: break-word;
+    border-radius: 20px;
+}
+
+.mini-border {
+    border: solid 1px black;
+}
+
+.schedule-date {
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.schedule-name {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+#mini-schedule-div {
+    border: solid 1px black;
+    border-radius: 12px;
+    margin: 5%;
+    height: auto;
+}
+
+.mini {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+.schedule-time {
+    font-size: 0.9vw;
+    font-weight: 600;
+    margin-top: 0%;
+    margin-bottom: 3px;
+}
+
+.schedule-description {
+    font-size: 0.9vw;
+    margin-top: 0%;
+}
