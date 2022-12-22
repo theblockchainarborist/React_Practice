@@ -9,8 +9,10 @@ class Calendar extends React.Component {
         currentYear: new Date().getFullYear(),
         dateString: '',
         showPopUp: false,
+        showScheduledData: false,
         formData: {},
         dayValue: [],
+        dayScheduleData: null,
         target: null
       }
   
@@ -19,8 +21,17 @@ class Calendar extends React.Component {
 
 
   handleMouseEnter = (event) => {
-    
-    console.log(event.target)
+    let tempTargetValue = event.target.value.split(/,(?=\{)/);
+
+    if (tempTargetValue.length > 1) {
+        let scheduledData = [];
+        for (let i = 1; i < tempTargetValue.length; i++) {
+            scheduledData.push(tempTargetValue[i]);
+        }
+        console.log(scheduledData)
+        this.setState({ dayScheduleData: scheduledData });
+        this.setState({ showScheduledData: true });
+    }
   }
 
   handleMouseLeave = () => {
