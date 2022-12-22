@@ -16,9 +16,9 @@ function CalendarDayScheduleEntry(props) {
   return (
     <div className="pop-up center">
       <form id="calendar-schedule-form" onSubmit={handleSubmit}>
-      <p class="title">{props.date}</p>
+      <p className="title">{props.date}</p>
       <div>
-        <label class="wide">
+        <label className="wide">
           Title:
           <input
             type="text"
@@ -45,7 +45,7 @@ function CalendarDayScheduleEntry(props) {
           />
         </label>
         <div>
-            <button class="submit-btn" type="submit">Submit</button>
+            <button className="submit-btn" type="submit">Submit</button>
         </div>
       </form>
     </div>

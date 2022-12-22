@@ -9,10 +9,23 @@ class Calendar extends React.Component {
         currentYear: new Date().getFullYear(),
         dateString: '',
         showPopUp: false,
-        formData: {}
+        formData: {},
+        dayValue: [],
+        target: null
       }
   
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+
+
+  handleMouseEnter = (event) => {
+    
+    console.log(event.target)
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ hovered: false });
+  }
 
 
   handlePopUpClose = () => {
@@ -21,7 +34,12 @@ class Calendar extends React.Component {
 
   handlePopUpSubmit = (formData) => {
     this.setState({ formData: formData, showPopUp: false });
-    console.log(formData)
+    let updatedTarget = this.state.target
+
+    updatedTarget.value = [this.state.target.value, JSON.stringify(formData)]
+
+    updatedTarget.className = "calendar-cell has-schedule"
+    this.setState({ target: updatedTarget });
   }
 
   renderHeader() {
@@ -83,7 +101,16 @@ class Calendar extends React.Component {
           break;
         } else {
           days.push(<div key={day}>
-            <button value={day} className="calendar-cell" key={day} onClick={(e) => this.handleDayClick(e, this.day, this.currentMonth)}> {day}</button> </div>);
+            <button value={day} 
+                    className="calendar-cell" 
+                    key={day} 
+                    onMouseEnter={this.handleMouseEnter}
+                    onMouseLeave={this.handleMouseLeave}
+                    onClick={(e) => this.handleDayClick(e, this.day, this.currentMonth)}
+                    > 
+                        {day}
+                    </button> 
+                </div>);
           day++;
         }
       }
@@ -97,105 +124,108 @@ class Calendar extends React.Component {
   handleDayClick(event) {
     // do something when a day is clicked, such as display an alert or navigate to another page
     let monthNum = `${this.state.currentMonth}`
+    this.setState({ target: event.currentTarget });
     let targetClicked = `${event.target.value}`
     let day;
 
-    switch (targetClicked) {
+    targetClicked = targetClicked.split(',');
+
+    switch (targetClicked[0]) {
         case '1': {
-            day = `${targetClicked}st`
+            day = `${targetClicked[0]}st`
         } break;
         case '2': {
-            day = `${targetClicked}nd`
+            day = `${targetClicked[0]}nd`
         } break;
         case '3': {
-            day = `${targetClicked}d`
+            day = `${targetClicked[0]}d`
         } break;
         case '4': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '5': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '6': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '7': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '8': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '9': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '10': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '11': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '12': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '13': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '14': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '15': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '16': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '17': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '18': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '19': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '20': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '21': {
-            day = `${targetClicked}st`
+            day = `${targetClicked[0]}st`
         } break;
         case '22': {
-            day = `${targetClicked}nd`
+            day = `${targetClicked[0]}nd`
         } break;
         case '23': {
-            day = `${targetClicked}d`
+            day = `${targetClicked[0]}d`
         } break;
         case '24': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '25': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '26': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '27': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '28': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '29': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '30': {
-            day = `${targetClicked}th`
+            day = `${targetClicked[0]}th`
         } break;
         case '31': {
-            day = `${targetClicked}st`
+            day = `${targetClicked[0]}st`
         } break;
         default: {
-            day = `${targetClicked}`
+            day = `${targetClicked[0]}`
         }
     }
     
@@ -203,6 +233,8 @@ class Calendar extends React.Component {
 
     this.setState({ dateString: date });
     this.setState({ showPopUp: true });
+
+    
   }
 
   render() {
