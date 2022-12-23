@@ -6,7 +6,7 @@
     left: 10;
     width: 200px;
     height: auto;
-    background-color: white;
+    background-color: rgba(17, 58, 112, 0.308);
     align-self: center;
     margin-right: 50px;
     white-space: normal;
@@ -23,6 +23,7 @@
     font-size: 1.5vw;
     margin-top: 1%;
     margin-bottom: 1%;
+    margin-right: 5px;
 }
 
 .schedule-name {
@@ -34,6 +35,7 @@
 
 #mini-schedule-div {
     border: solid 1px black;
+    background-color: #e2e3e5;;
     border-radius: 12px;
     margin: 5%;
     height: auto;

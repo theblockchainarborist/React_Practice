@@ -13,6 +13,10 @@ function CalendarDayScheduleEntry(props) {
     props.onSubmit(formData);
   }
 
+  const handleCancel = (event) => {
+    props.onClose()
+  }
+
   return (
     <div className="pop-up center">
       <form id="calendar-schedule-form" onSubmit={handleSubmit}>
@@ -47,6 +51,9 @@ function CalendarDayScheduleEntry(props) {
         </label>
         <div>
             <button className="submit-btn" type="submit">Submit</button>
+        </div>
+        <div>
+            <button className="submit-btn" type="button" onClick={handleCancel} >Cancel</button>
         </div>
       </form>
     </div>
